@@ -1,3 +1,12 @@
-# Start your docs here.
+# A Contact List App Example
 
-# See Volt docs at https://github.com/voltrb/volt/blob/master/Readme.md
+Still in progress, but shows the basics.
+
+To Run, start mongodb in one terminal:
+
+    mongod
+
+Then run the project:
+
+    bundle install
+    volt server
