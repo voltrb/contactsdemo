@@ -1,0 +1,29 @@
+<:Title>
+  {#template main_path, "title", {controller_group: 'main'}}
+
+<:Body>
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <:nav href="/" text="Home" />
+        <:nav href="/contacts" text="Contacts" />
+        <:nav href="/about" text="About" />
+      </ul>
+      <h3 class="text-muted">Project name</h3>
+    </div>
+
+    <:volt:notices />
+
+    {#template main_path, 'body', {controller_group: 'main'}}
+
+    <div class="footer">
+      <p>&copy; Company 2014</p>
+    </div>
+
+  </div>
+
+<:Nav>
+  <li class="{#if url.path.split('/')[1] == @href.split('/')[1]}active{/}">
+    <a href="{@href}">{@text}</a>
+  </li>
+

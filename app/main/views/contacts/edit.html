@@ -1,0 +1,15 @@
+<h1>
+  {#if _name.blank?}
+    New Contact
+  {#else}
+    {_name}
+  {/}
+</h1>
+
+<form e-submit="save!">
+  <:fields:text label="Name:" value="{_name}" />
+  <:fields:text label="Email:" value="{_email}" />
+  <:fields:textarea label="Address:" value="{_address}" />
+
+  <button>Save</button>
+</form>

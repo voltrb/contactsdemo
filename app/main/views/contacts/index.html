@@ -1,0 +1,32 @@
+<:Title>
+  Contacts
+
+<:Body>
+  <h1>Contacts Example</h1>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div>
+        <button e-click="new">New Contact</button>
+      </div>
+
+      <div class="search">
+        <input type="text" class="{#if searching}searching{/}" value="{_query}" />
+      </div>
+
+      <table class="table">
+        {#each queried_contacts as contact}
+          <tr class="contact {#if contact._id == model._id}selected{/}" e-click="select(contact)">
+            <td>{contact._name}</td>
+            <td><button e-click="remove(contact)">X</button></td>
+          </tr>
+        {/}
+      </table>
+    </div>
+
+    <div class="col-md-8">
+      <:edit model="{model}" />
+    </div>
+  </div>
+
+
