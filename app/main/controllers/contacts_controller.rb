@@ -1,4 +1,6 @@
 class ContactsController < ModelController
+  reactive_accessor :_query
+
   def index
     new()
   end
