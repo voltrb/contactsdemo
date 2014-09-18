@@ -9,4 +9,4 @@ To Run, start mongodb in one terminal:
 Then run the project:
 
     bundle install
-    volt server
+    bundle exec volt server
