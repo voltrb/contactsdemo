@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'volt'#, path: '/Users/ryanstout/Sites/volt/volt'#, '0.7.12'
+gem 'volt', '0.7.18'#, path: '/Users/ryanstout/Sites/volt/volt'#, '0.7.12'
 
 
 # The following gem's are optional for themeing
@@ -25,9 +25,6 @@ platform :jruby do
   gem 'jubilee'
 end
 
-
 #---------------------
 # Needed at the moment
-gem 'opal', git: 'https://github.com/opal/opal.git'
-gem 'opal-jquery', :git => 'https://github.com/opal/opal-jquery.git'
-gem 'sockjs', git: 'https://github.com/kacperk/sockjs-ruby.git', require: false, platforms: :mri
+gem 'volt-sockjs', require: false, platforms: :mri
