@@ -25,7 +25,7 @@ GEM
     method_source (0.8.2)
     mongo (1.9.2)
       bson (~> 1.9.2)
-    multi_json (1.9.0)
+    multi_json (1.10.1)
     opal (0.6.2)
       source_map
       sprockets
@@ -91,9 +91,9 @@ GEM
       thor (~> 0.18.0)
       uglifier (~> 2.4.0)
       yui-compressor (~> 0.12.0)
-    volt-bootstrap (0.0.3)
+    volt-bootstrap (0.0.5)
     volt-bootstrap-jumbotron-theme (0.0.3)
-    volt-fields (0.0.2)
+    volt-fields (0.0.5)
     volt-sockjs (0.3.4.4)
       faye-websocket (~> 0.7.1)
       json
