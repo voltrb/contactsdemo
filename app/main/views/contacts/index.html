@@ -2,31 +2,35 @@
   Contacts
 
 <:Body>
-  <h1>Contacts Example</h1>
+ <div class="row">
+   <div class="col-md-4">
+     <h2>Contacts</h2>
 
-  <div class="row">
-    <div class="col-md-4">
-      <div>
-        <button e-click="new">New Contact</button>
-      </div>
+     <div class="search">
+       <div class="form-search search-only">
+         <i class="search-icon glyphicon glyphicon-search"></i>
+         <input type="text" class="form-control search-query" value="{_query}">
+       </div>
+     </div>
 
-      <div class="search">
-        <input type="text" class="{#if searching}searching{/}" value="{_query}" />
-      </div>
+     <div class="list-group">
+       {#if queried_contacts.size == 0}
+         {#if _query.present?}
+           <a class="list-group-item">No results</a>
+         {/}
+       {/}
+       {#each queried_contacts as contact}
+         <a class="list-group-item contact {#if contact._id == model._id}active{/}" href="/contacts/{contact._id}/edit">
+           {contact._name}
+           <button class="close" e-click="remove(contact, event)">×</button>
+         </a>
+       {/}
+     </div>
 
-      <table class="table">
-        {#each queried_contacts as contact}
-          <tr class="contact {#if contact._id == model._id}selected{/}" e-click="select(contact)">
-            <td>{contact._name}</td>
-            <td><button e-click="remove(contact)">X</button></td>
-          </tr>
-        {/}
-      </table>
-    </div>
+     <button class="btn btn-default" e-click="go('/contacts/new')">New Contact</button>
+   </div>
 
-    <div class="col-md-8">
-      <:edit model="{model}" />
-    </div>
-  </div>
-
-
+   <div class="col-md-8">
+     <:edit model="{model}" />
+   </div>
+ </div>
