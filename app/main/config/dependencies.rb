@@ -5,6 +5,7 @@
 component 'bootstrap'
 
 # a default theme for the bootstrap framework
-component 'bootstrap-jumbotron-theme'
+# component 'bootstrap-jumbotron-theme'
+component 'bootflat'
 
 component 'fields'
