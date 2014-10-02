@@ -1,11 +1,20 @@
 class MainController < ModelController
   def index
     # Add code for when the index view is loaded
-    store._users.find(_id: '0').then do |result|
-      if result.size == 0
-        store._users << {_id: '0'}
-      end
-    end
+    # store._users.find(_id: '0').then do |result|
+    #   if result.size == 0
+    #     store._users << {_id: '0'}
+    #   end
+    # end
+
+    # store._users.find({}).then do |result|
+    #   if result.size == 0
+    #     store._users << {}
+    #   end
+    #
+    #   puts "GOT: #{store._users.inspect}"
+    # end
+
   end
 
   def about

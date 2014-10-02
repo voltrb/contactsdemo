@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'volt', '0.7.18'#, path: '/Users/ryanstout/Sites/volt/volt'#, '0.7.12'
+gem 'volt', path: '/Users/ryanstout/Sites/volt/volt'#, '0.7.12'
 
 
 # The following gem's are optional for themeing
@@ -11,7 +11,7 @@ gem 'volt-bootstrap'
 # Simple theme for bootstrap, remove to theme yourself.
 gem 'volt-bootstrap-jumbotron-theme'
 
-gem 'volt-fields'
+gem 'volt-fields', path: '/Users/ryanstout/Sites/volt/apps/volt-fields'
 
 
 # Server for MRI
