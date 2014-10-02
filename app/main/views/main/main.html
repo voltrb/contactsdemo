@@ -2,22 +2,48 @@
   {#template main_path, "title", {controller_group: 'main'}}
 
 <:Body>
-  <div class="container">
-    <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <:nav href="/" text="Home" />
-        <:nav href="/contacts" text="Contacts" />
-        <:nav href="/about" text="About" />
-      </ul>
-      <h3 class="text-muted">Project name</h3>
-    </div>
 
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Contacts</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+        <ul class="nav navbar-nav">
+          <:nav href="/" text="Home" />
+          <:nav href="/contacts" text="Contacts" />
+          <:nav href="/about" text="About" />
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
     <:volt:notices />
 
     {#template main_path, 'body', {controller_group: 'main'}}
 
     <div class="footer">
-      <p>&copy; Company 2014</p>
+      <div class="container">
+        <div class="clearfix">
+          <div class="footer-logo"><a href="#">Contacts</a></div>
+          <dl class="footer-nav">
+            <dt class="nav-title">PAGES</dt>
+            <dd class="nav-item"><a href="/">Home</a></dd>
+            <dd class="nav-item"><a href="/contacts">Contacts</a></dd>
+            <dd class="nav-item"><a href="/about">About</a></dd>
+          </dl>
+        </div>
+        <div class="footer-copyright text-center">Copyright © 2014.</div>
+      </div>
     </div>
 
   </div>
@@ -26,4 +52,3 @@
   <li class="{#if url.path.split('/')[1] == data.href.split('/')[1]}active{/}">
     <a href="{data.href}">{data.text}</a>
   </li>
-
