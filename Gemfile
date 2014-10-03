@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'volt', path: '/Users/ryanstout/Sites/volt/volt'#, '0.7.12'
+gem 'volt', '0.8.1'
 
 
 # The following gem's are optional for themeing
@@ -8,13 +8,10 @@ gem 'volt', path: '/Users/ryanstout/Sites/volt/volt'#, '0.7.12'
 # Twitter bootstrap
 gem 'volt-bootstrap'
 
-# Simple theme for bootstrap, remove to theme yourself.
-# gem 'volt-bootstrap-jumbotron-theme'
+# use the bootflat bootstrap theme
+gem 'volt-bootflat'
 
-gem 'volt-bootflat'#, path: '/Users/ryanstout/Sites/volt/apps/volt-bootflat'
-
-
-gem 'volt-fields', path: '/Users/ryanstout/Sites/volt/apps/volt-fields'
+gem 'volt-fields'
 
 
 # Server for MRI
