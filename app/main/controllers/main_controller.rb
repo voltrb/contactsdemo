@@ -9,10 +9,12 @@ class MainController < ModelController
 
     # store._users.find({}).then do |result|
     #   if result.size == 0
+    #     puts "OK"
+    #     puts "ADD USER to #{store._users.inspect}"
     #     store._users << {}
     #   end
     #
-    #   puts "GOT: #{store._users.inspect}"
+    #   # puts "GOT: #{store._users.inspect}"
     # end
 
   end

@@ -1,5 +1,5 @@
 <:Title>
-  {#template main_path, "title", {controller_group: 'main'}}
+  {{ template main_path, "title", {controller_group: 'main'} }}
 
 <:Body>
 
@@ -29,7 +29,7 @@
   <div class="container">
     <:volt:notices />
 
-    {#template main_path, 'body', {controller_group: 'main'}}
+    {{ template main_path, 'body', {controller_group: 'main'} }}
 
     <div class="footer">
       <div class="container">
@@ -49,6 +49,6 @@
   </div>
 
 <:Nav>
-  <li class="{#if url.path.split('/')[1] == attrs.href.split('/')[1]}active{/}">
-    <a href="{attrs.href}">{attrs.text}</a>
+  <li class="{{ if url.path.split('/')[1] == attrs.href.split('/')[1] }}active{{ end }}">
+    <a href="{{ attrs.href }}">{{ attrs.text }}</a>
   </li>

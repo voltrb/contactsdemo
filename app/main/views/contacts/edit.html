@@ -1,17 +1,17 @@
 <div class="well">
 
   <h3>
-    {#if _name.blank?}
+    {{ if _name.blank? }}
       New Contact
-    {#else}
-      {_name}
-    {/}
+    {{ else }}
+      {{ _name }}
+    {{ end }}
   </h3>
 
   <form e-submit="save!">
-    <:fields:text label="Name:" value="{_name}" />
-    <:fields:text label="Email:" value="{_email}" />
-    <:fields:textarea label="Address:" value="{_address}" />
+    <:fields:text label="Name:" value="{{ _name }}" />
+    <:fields:text label="Email:" value="{{ _email }}" />
+    <:fields:textarea label="Address:" value="{{ _address }}" />
 
     <button class="btn btn-primary">Save</button>
   </form>

@@ -9,28 +9,28 @@
      <div class="search">
        <div class="form-search search-only">
          <i class="search-icon glyphicon glyphicon-search"></i>
-         <input type="text" class="form-control search-query" value="{_query}">
+         <input type="text" class="form-control search-query" value="{{ _query }}">
        </div>
      </div>
 
      <div class="list-group">
-       {#if queried_contacts.size == 0}
-         {#if _query.present?}
+       {{ if queried_contacts.size == 0 }}
+         {{ if _query.present? }}
            <a class="list-group-item">No results</a>
-         {/}
-       {/}
-       {#each queried_contacts as contact}
-         <a class="list-group-item contact {#if contact._id == model._id}active{/}" e-click="select(contact)">
-           {contact._name}
+         {{ end }}
+       {{ end }}
+       {{ queried_contacts.each do |contact| }}
+         <a class="list-group-item contact {{ if contact._id == model._id }}active{{ end }}" e-click="select(contact)">
+           {{ contact._name }}
            <button class="close" e-click="remove(contact)">×</button>
          </a>
-       {/}
+       {{ end }}
      </div>
 
      <button class="btn btn-primary" e-click="new">New Contact</button>
    </div>
 
    <div class="col-md-8">
-     <:edit model="{model}" />
+     <:edit model="{{ model }}" />
    </div>
  </div>
