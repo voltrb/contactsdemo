@@ -1,21 +1,11 @@
 class MainController < ModelController
   def index
-    # Add code for when the index view is loaded
-    # store._users.find(_id: '0').then do |result|
-    #   if result.size == 0
-    #     store._users << {_id: '0'}
-    #   end
-    # end
-
-    # store._users.find({}).then do |result|
-    #   if result.size == 0
-    #     puts "OK"
-    #     puts "ADD USER to #{store._users.inspect}"
-    #     store._users << {}
-    #   end
-    #
-    #   # puts "GOT: #{store._users.inspect}"
-    # end
+    store._users.find({}).then do |result|
+      if result.size == 0
+        # Create a default user if one does not exist
+        store._users << {}
+      end
+    end
 
   end
 
