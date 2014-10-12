@@ -21,7 +21,7 @@ class ContactsController < ModelController
   end
 
   def queried_contacts
-    store._contacts.find({_name: { '$regex' => _query.or(''), '$options' => 'i' }})
+    store._contacts.find({name: { '$regex' => _query.or(''), '$options' => 'i' }})
   end
 
   def searching
