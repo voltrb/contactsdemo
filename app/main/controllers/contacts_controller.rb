@@ -1,4 +1,4 @@
-class ContactsController < ModelController
+class ContactsController < Volt::ModelController
   reactive_accessor :_query
 
   def index

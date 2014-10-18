@@ -9,3 +9,5 @@ component 'bootstrap'
 component 'bootflat'
 
 component 'fields'
+
+component 'google-maps'

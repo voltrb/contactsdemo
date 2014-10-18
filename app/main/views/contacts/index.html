@@ -28,6 +28,19 @@
      </div>
 
      <button class="btn btn-primary" e-click="new">New Contact</button>
+
+     <hr />
+
+     <style>
+     #map-canvas {
+       height: 300px;
+     }
+     </style>
+
+     <div id="map-canvas">
+       <:google-maps center="United States" zoom="2" markers="{{ store._contacts }}" />
+     </div>
+
    </div>
 
    <div class="col-md-8">

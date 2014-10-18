@@ -13,6 +13,8 @@ gem 'volt-bootflat'
 
 gem 'volt-fields'
 
+gem 'volt-google-maps'#, path: '/Users/ryanstout/Sites/volt/apps/volt-google-maps'
+
 
 # Server for MRI
 platform :mri do

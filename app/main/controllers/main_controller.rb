@@ -1,4 +1,4 @@
-class MainController < ModelController
+class MainController < Volt::ModelController
   def index
     store._users.find({}).then do |result|
       if result.size == 0
